@@ -1,0 +1,59 @@
+<html>
+<head>
+		<meta charset="utf-8">
+		<TITLE>JPWP PDF Editor</TITLE>
+		<script type="text/javascript" src="{{url_for('static', filename='jquery.js') }}"></script>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+ 
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light transparent">
+		<div class="container"> 
+			<a class="navbar-brand" href="#">JPWP PDF Editor</a>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav" id="menu-buttons">
+					<li class="nav-item active">
+						<a class="nav-link" href="showMainPage">Strona główna</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="showLogin">Zaloguj</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="showSignUp">Zarejestruj</a>
+					</li>			
+				</ul>
+			</div>
+		</div>
+	</nav>
+   <main role="main" class="container">
+		<center><h1 class="display-4" style="margin-top:7%">
+			Witaj
+		</h1></center>
+		
+		<h3 class="lead">
+			Na tej stronie możesz zarządzać swoimi plikami pdf. Możesz zapisać nawet do 5 plików. Tutaj zedytujesz swoje pliki PDF.
+		
+		</h3>
+		
+		<br>
+		<center><h2 class="font-weight-light">Sprawdź teraz!</h2></center>
+		<center><button type="button" class="btn btn-dark" onclick="location.href='showSignUp'">Zarejestruj</button></center>
+		<img src="{{url_for('static',filename = 'pdfmain.jpg')}}" style="position:fixed">
+		
+		
+   </main>
+   <footer class="footer fixed-bottom p-2" style="background-color: #f5f5f5">
+      <div class="container">
+        <span class="text-muted">JPWPeditor by Wiktor Tekiela</span>
+      </div>
+    </footer>
+
+</body>
+ 
+</html>

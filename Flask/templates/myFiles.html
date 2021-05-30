@@ -1,0 +1,92 @@
+<html>
+<head>
+		<meta charset="utf-8">
+		<TITLE>JPWP PDF Editor</TITLE>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<script type="text/javascript" src="{{url_for('static', filename='myFiles.js') }}"></script>
+		<script type="text/javascript" src="{{url_for('static', filename='editFiles.js') }}"></script>
+</head>
+
+<body>
+	<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+		<div class="container">
+			<a class="navbar-brand" href="#">JPWP PDF Editor</a>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav" id="menu-buttons">
+					<li class="nav-item active">
+						<a class="nav-link" href="uIndex">Strona główna</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="myFiles">Moje Pliki</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="myProfile">Mój Profil</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="logout">Wyloguj</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="container" style="margin-top: 5%">
+		<center><h1 class="display-4">
+			Oto Twoje pliki
+		</h1></center>
+	</div>
+	<div class="container">
+	<div class="row" style="margin-top:5%">
+			<div class="col-md-2">
+				<img src="{{url_for('static',filename = 'pdf.jpg')}}" width="50%" height="auto" >
+			</div>
+			<div class="col-md-10">
+				<h2 id="file1" class="font-weight-light"></h2>
+				<button id="editfile1" type="button" onclick="location.href='edit'" class="btn btn-outline-primary">Edytuj</button>
+				<button id="delfile1" onclick="location.href='delfile1';" type="button" class="btn btn-outline-primary">Usuń</button>
+				<button id="downoloadfile1" onclick="location.href='download1';" class="btn btn-outline-primary">Pobierz</button>
+			</div>
+			<div class="col-md-2">
+				<img src="{{url_for('static',filename = 'pdf.jpg')}}" width="50%" height="auto" >
+			</div>
+			<div class="col-md-10">
+				<h2 id="file2" class="font-weight-light"></h2>
+				<button id="editfile2" type="button" onclick="location.href='edit'" class="btn btn-outline-primary">Edytuj</button>
+				<button id="delfile2" onclick="location.href='delfile2';" type="button" class="btn btn-outline-primary">Usuń</button>
+				<button id="downoloadfile2" onclick="location.href='download2';" class="btn btn-outline-primary">Pobierz</button>
+			</div>
+			<div class="col-md-2">
+				<img src="{{url_for('static',filename = 'pdf.jpg')}}" width="50%" height="auto" >
+			</div>
+			<div class="col-md-10">
+				<h2 id="file3" class="font-weight-light"></h2>
+				<button id="editfile3" type="button" onclick="location.href='edit'" class="btn btn-outline-primary">Edytuj</button>
+				<button id="delfile3" onclick="location.href='delfile3';" type="button" class="btn btn-outline-primary">Usuń</button>
+				<button id="downoloadfile3" onclick="location.href='download3';" class="btn btn-outline-primary">Pobierz</button>
+			</div>
+			<div class="col-md-2">
+				<img src="{{url_for('static',filename = 'pdf.jpg')}}" width="50%" height="auto" >
+			</div>
+			<div class="col-md-10">
+				<h2 id="file4" class="font-weight-light"></h2>
+				<button id="editfile4" type="button" onclick="location.href='edit'" class="btn btn-outline-primary">Edytuj</button>
+				<button id="delfile4" onclick="location.href='delfile4';" type="button" class="btn btn-outline-primary">Usuń</button>
+				<button id="downoloadfile4" onclick="location.href='download4';" class="btn btn-outline-primary">Pobierz</button>
+			</div>
+			<div class="col-md-2">
+				<img src="{{url_for('static',filename = 'pdf.jpg')}}" width="50%" height="auto" >
+			</div>
+			<div class="col-md-10">
+				<h2 id="file5" class="font-weight-light"></h2>
+				<button id="editfile5" type="button" onclick="location.href='edit'" class="btn btn-outline-primary">Edytuj</button>
+				<button id="delfile5" onclick="location.href='delfile5';" type="button" class="btn btn-outline-primary">Usuń</button>
+				<button id="downoloadfile5" onclick="location.href='download5';" class="btn btn-outline-primary">Pobierz</button>
+			</div>
+	</div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+<html>
+<head>
+		<meta charset="utf-8">
+		<TITLE>JPWP PDF Editor</TITLE>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<script type="text/javascript" src="{{url_for('static', filename='editFiles.js') }}"></script>
+
+</head>
+
+<body>
+
+	<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+		<div class="container"> 
+			<a class="navbar-brand" href="#">JPWP PDF Editor</a>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav" id="menu-buttons">
+					<li class="nav-item active">
+						<a class="nav-link" href="uIndex">Strona główna</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="myFiles">Moje Pliki</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="myProfile">Mój Profil</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="logout">Wyloguj</a>
+					</li>			
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="position-relative overflow-hidden p-2 p-md-5 m-md-3 text-center bg-white">
+      <div class="col-md-5 p-lg-5 mx-auto my-5">
+        <h1 class="display-4 font-weight-normal">Edytuj swój plik</h1>
+        <p class="lead font-weight-normal">Tutaj za pomocą specjalnie przygotowanych narzędzi jesteś w stanie usunąć konkretną stronę ze swojego pliku, obrócić ją lub przekonwertować plik do formatu dockx</p>
+        <a class="btn btn-outline-secondary" href="#">Do dzieła!</a><br><br>
+		<h4 class="font-weight-light text-danger"><center>Wybrałeś złą stronę</h3></center>
+      </div>
+      <div class="product-device box-shadow d-none d-md-block"></div>
+      <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
+    </div>
+	<div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+        <div class="my-3 p-3">
+          <h2 class="display-5">Usuń stronę</h2>
+          <p class="lead">Podaj numer strony i zatwierdź</p>
+        </div>
+        <div class="bg-dark box-shadow mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+			<form action="/delPage" method="post">
+				<br><br><br>
+				<div class="form-group">
+					<label for="numPage" class="text-secondary">Numer strony</label>
+					<center><input type="delPage" name="delPage" class="form-control bg-dark text-light" id="delPage" placeholder="Podaj stronę" style="width:20%"></center>
+					<small class="form-text text-muted">Pamiętaj że usunięte strony nie będą mogły zostać odzyskane</small>
+				</div>
+				<button id="delThisPage" type="Submit" class="btn btn-primary">Usuń</button>
+			</form>
+		</div>
+     </div>
+	<div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+        <div class="my-3 py-3">
+          <h2 class="display-5">Obróć stronę o 90 stopni</h2>
+          <p class="lead">Podaj numer strony którą chcesz obrócić i zatwierdź</p>
+        </div>
+        <div class="bg-light box-shadow mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+			<form action="/rotPage" method="post">
+				<br><br><br>
+				<div class="form-group">
+					<label for="rotpage" class="text-secondary">Numer strony</label>
+					<center><input type="rotPage" class="form-control" name="rotPage" id="rotPage" placeholder="Podaj stronę" style="width:20%"></center>
+					<small class="form-text text-muted">Pamiętaj że modyfikacje są zapisywane automatycznie</small>
+				</div>
+ 
+				<button type="Submit" class="btn btn-primary">Obróć</button>
+			</form>
+		
+		</div>
+      </div>
+	  <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+        <div class="my-3 p-3">
+          <h2 class="display-5">Konwertuj do pliku .docx</h2>
+        </div>
+        <div class="bg-dark box-shadow mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+				<br><br><br>
+				<h2 class="display-5 text-white"><center>
+					Pobierz plik w formacie docx aby móc go otworzyć w wordzie.
+				</center></h2>
+ 
+				<button type="Submit" onclick="location.href='docx'" class="btn btn-primary" style="margin-top:2%">Pobierz</button>
+			
+		
+		
+		</div>
+     </div>
+	
+	
+
+</body>
+</html>
